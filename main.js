@@ -7,7 +7,7 @@ $(document).ready(function() {
   //this function calls for the user coords and consoles them once got
 
   //gets emoji
-  $.getJSON(e, function(json){
+  $.getJSON(e, function(e){
     emoji = json;
     console.log(emoji);
   });
