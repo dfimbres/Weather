@@ -1,6 +1,7 @@
 var url = 'https://api.wunderground.com/api/740ed5d83e841d47/conditions/q/';
 var e = 'https://raw.githubusercontent.com/omnidan/node-emoji/master/lib/emoji.json';
 var emoji;
+var gitURL = 'https://api.github.com/users/dfimbres/repos';
 
 //Here only to make sure the site starts once up
 $(document).ready(function() {
@@ -32,7 +33,10 @@ function main(temp, location, weather, wind){
 //First
 //gets user location
 function getLocation(){
-
+  $.getJSON(gitURL, function(data){
+    console.log(data);
+    
+  });
   //function that calls for user location
   //pos variable for the data recieved
   if(navigator.geolocation){
